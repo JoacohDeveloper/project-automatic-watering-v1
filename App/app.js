@@ -31,7 +31,6 @@ const sm3 = document.querySelector('.whats');
 
 
 
-
 document.addEventListener('scroll', ()=> {
     var y = scrollY;
     scrollY === 20;
