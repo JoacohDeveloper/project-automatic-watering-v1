@@ -32,7 +32,7 @@ h1, h2, h3 ,h4 , p {
 
 .header {
     width: 100%;
-    height: 100vh;
+    height: 95vh;
     position: relative;
     background-color: var(--sec-bg-color);
  
@@ -112,9 +112,22 @@ h1, h2, h3 ,h4 , p {
     align-items: center;
     width: 100%;
     display: grid;
-    grid-template-columns:  repeat(3, 1fr);
+    grid-template-columns:  repeat(3, 1fr );
     gap: 20px;
     justify-content: space-around;
+}
+
+@media  screen and (min-width: 800px) {
+   .upperThings {
+        grid-template-columns:  repeat(6, 1fr );
+
+        
+   }
+
+   .language {
+    margin-left: -160px;
+   }
+    
 }
 
 .upperThingS {
@@ -432,7 +445,7 @@ h1, h2, h3 ,h4 , p {
         }
 
         .language {
-            flex-wrap: wrap;
+            /* flex-wrap: wrap; */
             grid-column-start:  5;
             grid-column-end:  5;
         }
@@ -671,20 +684,24 @@ h1, h2, h3 ,h4 , p {
     flex-direction: row;
     flex-wrap: nowrap;
     width: 100%;
+    line-height:0;
     margin-bottom: 45px;
 }
 
 .wave1 {
     width: 100%;
+    line-height:0;
 }
 .wave2 {
     width: 100%;
+    line-height:0;
 }
 
 .wave1::before {
         content: "";
         background-image: url("../Images/wave1.svg");
         width: 100%;
+        display: block;
         background-repeat: no-repeat;
         object-fit: cover;
         position: absolute;
@@ -958,7 +975,7 @@ h1, h2, h3 ,h4 , p {
     display: flex;
     align-items: center;
     justify-content: center;
-     margin-top:  -120px;
+     margin-top:  45px;
      position: relative;
      overflow: hidden;
     margin-bottom: 45px;
@@ -967,7 +984,6 @@ h1, h2, h3 ,h4 , p {
 #submit {
     width: 100%;
     height: 40px;
-    margin-top: 120px;
     cursor: pointer;
     background-color: rgba(128, 128, 128, 0.459);
 
@@ -977,6 +993,10 @@ h1, h2, h3 ,h4 , p {
     .referrerContent {
         justify-content: center;
         height: 80%;
+    }
+
+    .header {
+        height: 100vh;
     }
 
     .burgerBtn {
@@ -989,10 +1009,15 @@ h1, h2, h3 ,h4 , p {
         position: absolute;
         display: block;
         display: flex;
-        grid-column-start: 3;
-        grid-column-end: 3;
+        grid-column-start: 4;
+        grid-column-end: 7;
         flex-direction: row;
         overflow-wrap: break-word;
+    }
+
+    .language {
+        grid-column-start: 2;
+        grid-column-end: 2;
     }
 
     .item {
